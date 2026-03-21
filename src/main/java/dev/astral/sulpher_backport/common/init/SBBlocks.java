@@ -58,24 +58,22 @@ public class SBBlocks {
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
             entries.add(SULFER_BLOCK);
-            entries.add(CINNABAR_BLOCK);
-
             entries.add(CHISELED_SULFER);
-            entries.add(CHISELED_CINNABAR);
-
             entries.add(POLISHED_SULFER);
-            entries.add(POLISHED_CINNABAR);
             entries.add(POLISHED_SULFER_STAIRS);
             entries.add(POLISHED_SULFER_SLAB);
             entries.add(POLISHED_SULFER_WALL);
+            entries.add(SULFER_BRICKS);
+            entries.add(SULFER_BRICK_STAIRS);
+            entries.add(SULFER_BRICK_SLAB);
+
+            entries.add(CINNABAR_BLOCK);
+            entries.add(CHISELED_CINNABAR);
+            entries.add(POLISHED_CINNABAR);
             entries.add(POLISHED_CINNABAR_STAIRS);
             entries.add(POLISHED_CINNABAR_SLAB);
             entries.add(POLISHED_CINNABAR_WALL);
-
-            entries.add(SULFER_BRICKS);
             entries.add(CINNABAR_BRICKS);
-            entries.add(SULFER_BRICK_STAIRS);
-            entries.add(SULFER_BRICK_SLAB);
             entries.add(CINNABAR_BRICK_STAIRS);
             entries.add(CINNABAR_BRICK_SLAB);
         });
