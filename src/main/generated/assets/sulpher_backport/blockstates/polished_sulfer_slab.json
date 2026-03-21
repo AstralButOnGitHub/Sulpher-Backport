@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "sulpher_backport:block/polished_sulfer_slab"
+    },
+    "type=double": {
+      "model": "sulpher_backport:block/polished_sulfer"
+    },
+    "type=top": {
+      "model": "sulpher_backport:block/polished_sulfer_slab_top"
+    }
+  }
+}

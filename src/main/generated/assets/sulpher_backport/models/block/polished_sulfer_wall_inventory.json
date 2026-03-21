@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "sulpher_backport:block/polished_sulfer"
+  }
+}

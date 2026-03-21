@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "sulpher_backport",
+  "version": "${version}",
+  "name": "Sulpher Backport",
+  "description": "Backports the Cinnabar and Sulphur from the Chaos Cubed update.",
+  "authors": [],
+  "contact": {},
+  "license": "ARR",
+  "icon": "assets/sulpher_backport/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "fabric-datagen": [
+      "dev.astral.sulpher_backport.client.Sulpher_backportDataGenerator"
+    ],
+    "client": [
+      "dev.astral.sulpher_backport.client.Sulpher_backportClient"
+    ],
+    "main": [
+      "dev.astral.sulpher_backport.Sulpher_backport"
+    ]
+  },
+  "mixins": [
+    "sulpher_backport.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}

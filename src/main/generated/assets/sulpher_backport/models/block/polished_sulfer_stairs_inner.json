@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "sulpher_backport:block/polished_sulfer",
+    "side": "sulpher_backport:block/polished_sulfer",
+    "top": "sulpher_backport:block/polished_sulfer"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "block.sulpher_backport.sulfer_block": "Sulphur Block",
+  "block.sulpher_backport.cinnabar_block": "Cinnabar Block",
+
+  "block.sulpher_backport.chiseled_sulfer": "Chiseled Sulphur",
+  "block.sulpher_backport.chiseled_cinnabar": "Chiseled Cinnabar",
+
+  "block.sulpher_backport.polished_sulfer": "Polished Sulphur",
+  "block.sulpher_backport.polished_cinnabar": "Polished Cinnabar",
+  "block.sulpher_backport.polished_sulfer_stairs": "Polished Sulphur Stairs",
+  "block.sulpher_backport.polished_sulfer_slab": "Polished Sulphur Slab",
+  "block.sulpher_backport.polished_sulfer_wall": "Polished Sulphur Wall",
+  "block.sulpher_backport.polished_cinnabar_stairs": "Polished Cinnabar Stairs",
+  "block.sulpher_backport.polished_cinnabar_slab": "Polished Cinnabar Slab",
+  "block.sulpher_backport.polished_cinnabar_wall": "Polished Cinnabar Wall",
+
+  "block.sulpher_backport.sulfer_bricks": "Sulphur Bricks",
+  "block.sulpher_backport.cinnabar_bricks": "Cinnabar Bricks",
+  "block.sulpher_backport.sulfer_brick_stairs": "Sulphur Brick Stairs",
+  "block.sulpher_backport.sulfer_brick_slab": "Sulphur Brick Slab",
+  "block.sulpher_backport.cinnabar_brick_stairs": "Cinnabar Brick Stairs",
+  "block.sulpher_backport.cinnabar_brick_slab": "Cinnabar Brick Slab"
+}
