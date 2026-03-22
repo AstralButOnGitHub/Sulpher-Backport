@@ -1,6 +1,8 @@
 {
-  "block.sulphur_backport.sulphur_block": "Sulphur Block",
-  "block.sulphur_backport.cinnabar_block": "Cinnabar Block",
+  "block.sulphur_backport.sulphur_block": "Sulphur",
+  "block.sulphur_backport.cinnabar_block": "Cinnabar",
+
+  "block.sulphur_backport.potent_sulphur": "Potent Sulphur",
 
   "block.sulphur_backport.sulphur_stairs": "Sulphur Stairs",
   "block.sulphur_backport.sulphur_slab": "Sulphur Slab",

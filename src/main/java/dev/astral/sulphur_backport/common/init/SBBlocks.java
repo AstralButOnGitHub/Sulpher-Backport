@@ -1,5 +1,6 @@
 package dev.astral.sulphur_backport.common.init;
 
+import dev.astral.sulphur_backport.common.blocks.PotentSulphurBlock;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
@@ -14,7 +15,10 @@ import static dev.astral.sulphur_backport.Sulphur_backport.MOD_ID;
 
 public class SBBlocks {
 
+    public static final Block POTENT_SULPHUR = registerBlock("potent_sulphur", new PotentSulphurBlock(AbstractBlock.Settings.copy(Blocks.DIORITE).mapColor(DyeColor.YELLOW)));
+
     public static final Block SULPHUR_BLOCK = registerBlock("sulphur_block", new Block(AbstractBlock.Settings.copy(Blocks.DIORITE).mapColor(DyeColor.YELLOW)));
+
     public static final Block CINNABAR_BLOCK = registerBlock("cinnabar_block", new Block(AbstractBlock.Settings.copy(Blocks.DIORITE).mapColor(DyeColor.RED)));
 
     public static final Block SULPHUR_STAIRS = registerBlock("sulphur_stairs", new StairsBlock(SULPHUR_BLOCK.getDefaultState(), AbstractBlock.Settings.copy(SULPHUR_BLOCK)));

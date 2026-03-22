@@ -16,6 +16,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(SBBlocks.CHISELED_SULPHUR);
         blockStateModelGenerator.registerSimpleCubeAll(SBBlocks.CHISELED_CINNABAR);
 
+        blockStateModelGenerator.registerSimpleCubeAll(SBBlocks.POTENT_SULPHUR);
 
         BlockStateModelGenerator.BlockTexturePool CINNABAR = blockStateModelGenerator.registerCubeAllModelTexturePool(SBBlocks.CINNABAR_BLOCK);
         CINNABAR.slab(SBBlocks.CINNABAR_SLAB);
