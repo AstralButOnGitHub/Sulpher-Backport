@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "sulphur_backport:block/potent_sulphur"
+    }
+  }
+}

@@ -1,8 +1,6 @@
 {
   "values": [
     "sulphur_backport:sulphur_block",
-    "sulphur_backport:cinnabar_block",
-    "sulphur_backport:sulphur_block",
     "sulphur_backport:cinnabar_block"
   ]
 }

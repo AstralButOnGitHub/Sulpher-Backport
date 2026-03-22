@@ -17,91 +17,75 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
-        add(BlockTags.PICKAXE_MINEABLE,
-                SBBlocks.SULPHUR_BLOCK,
-                SBBlocks.CINNABAR_BLOCK,
+        valueLookupBuilder(BlockTags.PICKAXE_MINEABLE)
+                .add(
+                        SBBlocks.SULPHUR_BLOCK,
+                        SBBlocks.CINNABAR_BLOCK,
 
-                SBBlocks.SULPHUR_STAIRS,
-                SBBlocks.SULPHUR_SLAB,
-                SBBlocks.SULPHUR_WALL,
+                        SBBlocks.SULPHUR_STAIRS,
+                        SBBlocks.SULPHUR_SLAB,
+                        SBBlocks.SULPHUR_WALL,
 
-                SBBlocks.CINNABAR_STAIRS,
-                SBBlocks.CINNABAR_SLAB,
-                SBBlocks.CINNABAR_WALL,
+                        SBBlocks.CINNABAR_STAIRS,
+                        SBBlocks.CINNABAR_SLAB,
+                        SBBlocks.CINNABAR_WALL,
 
-                SBBlocks.CHISELED_SULPHUR,
-                SBBlocks.CHISELED_CINNABAR,
+                        SBBlocks.CHISELED_SULPHUR,
+                        SBBlocks.CHISELED_CINNABAR,
 
-                SBBlocks.POLISHED_SULPHUR,
-                SBBlocks.POLISHED_CINNABAR,
-                SBBlocks.POLISHED_SULPHUR_STAIRS,
-                SBBlocks.POLISHED_SULPHUR_SLAB,
-                SBBlocks.POLISHED_SULPHUR_WALL,
-                SBBlocks.POLISHED_CINNABAR_STAIRS,
-                SBBlocks.POLISHED_CINNABAR_SLAB,
-                SBBlocks.POLISHED_CINNABAR_WALL,
+                        SBBlocks.POLISHED_SULPHUR,
+                        SBBlocks.POLISHED_CINNABAR,
+                        SBBlocks.POLISHED_SULPHUR_STAIRS,
+                        SBBlocks.POLISHED_SULPHUR_SLAB,
+                        SBBlocks.POLISHED_SULPHUR_WALL,
+                        SBBlocks.POLISHED_CINNABAR_STAIRS,
+                        SBBlocks.POLISHED_CINNABAR_SLAB,
+                        SBBlocks.POLISHED_CINNABAR_WALL,
 
-                SBBlocks.SULPHUR_BRICKS,
-                SBBlocks.CINNABAR_BRICKS,
-                SBBlocks.SULPHUR_BRICK_STAIRS,
-                SBBlocks.SULPHUR_BRICK_SLAB,
-                SBBlocks.CINNABAR_BRICK_STAIRS,
-                SBBlocks.CINNABAR_BRICK_SLAB
-        );
+                        SBBlocks.SULPHUR_BRICKS,
+                        SBBlocks.CINNABAR_BRICKS,
+                        SBBlocks.SULPHUR_BRICK_STAIRS,
+                        SBBlocks.SULPHUR_BRICK_SLAB,
+                        SBBlocks.CINNABAR_BRICK_STAIRS,
+                        SBBlocks.CINNABAR_BRICK_SLAB
+                );
 
-        add(BlockTags.MOSS_REPLACEABLE,
-                SBBlocks.SULPHUR_BLOCK,
-                SBBlocks.CINNABAR_BLOCK
-        );
-        add(BlockTags.STONE_ORE_REPLACEABLES,
-                SBBlocks.SULPHUR_BLOCK,
-                SBBlocks.CINNABAR_BLOCK
-        );
-        add(BlockTags.SCULK_REPLACEABLE,
-                SBBlocks.SULPHUR_BLOCK,
-                SBBlocks.CINNABAR_BLOCK
-        );
-        add(BlockTags.SCULK_REPLACEABLE_WORLD_GEN,
-                SBBlocks.SULPHUR_BLOCK,
-                SBBlocks.CINNABAR_BLOCK
-        );
-        add(BlockTags.DRIPSTONE_REPLACEABLE_BLOCKS,
-                SBBlocks.SULPHUR_BLOCK,
-                SBBlocks.CINNABAR_BLOCK
-        );
-        add(BlockTags.AZALEA_ROOT_REPLACEABLE,
-                SBBlocks.SULPHUR_BLOCK,
-                SBBlocks.CINNABAR_BLOCK
-        );
-        add(BlockTags.LUSH_GROUND_REPLACEABLE,
-                SBBlocks.SULPHUR_BLOCK,
-                SBBlocks.CINNABAR_BLOCK
-        );
-        add(BlockTags.BASE_STONE_OVERWORLD,
-                SBBlocks.SULPHUR_BLOCK,
-                SBBlocks.CINNABAR_BLOCK
-        );
-        add(BlockTags.OVERWORLD_CARVER_REPLACEABLES,
-                SBBlocks.SULPHUR_BLOCK,
-                SBBlocks.CINNABAR_BLOCK
-        );
-        add(BlockTags.MOSS_REPLACEABLE,
-                SBBlocks.SULPHUR_BLOCK,
-                SBBlocks.CINNABAR_BLOCK
-        );
-        add(BlockTags.NETHER_CARVER_REPLACEABLES,
-                SBBlocks.SULPHUR_BLOCK,
-                SBBlocks.CINNABAR_BLOCK
-        );
-        add(BlockTags.WALLS,
-                SBBlocks.CINNABAR_WALL,
-                SBBlocks.SULPHUR_WALL,
-                SBBlocks.POLISHED_SULPHUR_WALL,
-                SBBlocks.POLISHED_SULPHUR_WALL
-        );
-    }
+        valueLookupBuilder(BlockTags.MOSS_REPLACEABLE)
+                .add(SBBlocks.SULPHUR_BLOCK, SBBlocks.CINNABAR_BLOCK);
 
-    private void add(TagKey<Block> tag, Block... blocks) {
-        getOrCreateTagBuilder(tag).add(blocks);
+        valueLookupBuilder(BlockTags.STONE_ORE_REPLACEABLES)
+                .add(SBBlocks.SULPHUR_BLOCK, SBBlocks.CINNABAR_BLOCK);
+
+        valueLookupBuilder(BlockTags.SCULK_REPLACEABLE)
+                .add(SBBlocks.SULPHUR_BLOCK, SBBlocks.CINNABAR_BLOCK);
+
+        valueLookupBuilder(BlockTags.SCULK_REPLACEABLE_WORLD_GEN)
+                .add(SBBlocks.SULPHUR_BLOCK, SBBlocks.CINNABAR_BLOCK);
+
+        valueLookupBuilder(BlockTags.DRIPSTONE_REPLACEABLE_BLOCKS)
+                .add(SBBlocks.SULPHUR_BLOCK, SBBlocks.CINNABAR_BLOCK);
+
+        valueLookupBuilder(BlockTags.AZALEA_ROOT_REPLACEABLE)
+                .add(SBBlocks.SULPHUR_BLOCK, SBBlocks.CINNABAR_BLOCK);
+
+        valueLookupBuilder(BlockTags.LUSH_GROUND_REPLACEABLE)
+                .add(SBBlocks.SULPHUR_BLOCK, SBBlocks.CINNABAR_BLOCK);
+
+        valueLookupBuilder(BlockTags.BASE_STONE_OVERWORLD)
+                .add(SBBlocks.SULPHUR_BLOCK, SBBlocks.CINNABAR_BLOCK);
+
+        valueLookupBuilder(BlockTags.OVERWORLD_CARVER_REPLACEABLES)
+                .add(SBBlocks.SULPHUR_BLOCK, SBBlocks.CINNABAR_BLOCK);
+
+        valueLookupBuilder(BlockTags.NETHER_CARVER_REPLACEABLES)
+                .add(SBBlocks.SULPHUR_BLOCK, SBBlocks.CINNABAR_BLOCK);
+
+        valueLookupBuilder(BlockTags.WALLS)
+                .add(
+                        SBBlocks.CINNABAR_WALL,
+                        SBBlocks.SULPHUR_WALL,
+                        SBBlocks.POLISHED_SULPHUR_WALL,
+                        SBBlocks.POLISHED_CINNABAR_WALL
+                );
     }
 }

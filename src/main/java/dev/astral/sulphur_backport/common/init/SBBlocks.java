@@ -3,64 +3,71 @@ package dev.astral.sulphur_backport.common.init;
 import dev.astral.sulphur_backport.common.blocks.PotentSulphurBlock;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.*;
+import net.minecraft.block.enums.NoteBlockInstrument;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 
+import java.util.function.Function;
+
 import static dev.astral.sulphur_backport.Sulphur_backport.MOD_ID;
 
-public class SBBlocks {
+public class SBBlocks {    
+    public static final Block POTENT_SULPHUR = registerBlock("potent_sulphur", properties -> new PotentSulphurBlock(properties.instrument(NoteBlockInstrument.BASEDRUM).requiresTool().strength(1.5F, 6.0F).mapColor(DyeColor.YELLOW)));
 
-    public static final Block POTENT_SULPHUR = registerBlock("potent_sulphur", new PotentSulphurBlock(AbstractBlock.Settings.copy(Blocks.DIORITE).mapColor(DyeColor.YELLOW)));
+    public static final Block SULPHUR_BLOCK = registerBlock("sulphur_block", properties -> new Block(properties.instrument(NoteBlockInstrument.BASEDRUM).requiresTool().strength(1.5F, 6.0F).mapColor(DyeColor.YELLOW)));
 
-    public static final Block SULPHUR_BLOCK = registerBlock("sulphur_block", new Block(AbstractBlock.Settings.copy(Blocks.DIORITE).mapColor(DyeColor.YELLOW)));
+    public static final Block CINNABAR_BLOCK = registerBlock("cinnabar_block", properties -> new Block(properties.instrument(NoteBlockInstrument.BASEDRUM).requiresTool().strength(1.5F, 6.0F).mapColor(DyeColor.RED)));
 
-    public static final Block CINNABAR_BLOCK = registerBlock("cinnabar_block", new Block(AbstractBlock.Settings.copy(Blocks.DIORITE).mapColor(DyeColor.RED)));
+    public static final Block SULPHUR_STAIRS = registerBlock("sulphur_stairs", properties -> new StairsBlock(SULPHUR_BLOCK.getDefaultState(), properties.instrument(NoteBlockInstrument.BASEDRUM).requiresTool().strength(1.5F, 6.0F).mapColor(DyeColor.YELLOW)));
+    public static final Block SULPHUR_SLAB = registerBlock("sulphur_slab", properties -> new SlabBlock(properties.instrument(NoteBlockInstrument.BASEDRUM).requiresTool().strength(1.5F, 6.0F).mapColor(DyeColor.YELLOW)));
+    public static final Block SULPHUR_WALL = registerBlock("sulphur_wall", properties -> new WallBlock(properties.instrument(NoteBlockInstrument.BASEDRUM).requiresTool().strength(1.5F, 6.0F).mapColor(DyeColor.YELLOW)));
 
-    public static final Block SULPHUR_STAIRS = registerBlock("sulphur_stairs", new StairsBlock(SULPHUR_BLOCK.getDefaultState(), AbstractBlock.Settings.copy(SULPHUR_BLOCK)));
-    public static final Block SULPHUR_SLAB = registerBlock("sulphur_slab", new SlabBlock(AbstractBlock.Settings.copy(SULPHUR_BLOCK)));
-    public static final Block SULPHUR_WALL = registerBlock("sulphur_wall", new WallBlock(AbstractBlock.Settings.copy(SULPHUR_BLOCK)));
-
-    public static final Block CINNABAR_STAIRS = registerBlock("cinnabar_stairs", new StairsBlock(CINNABAR_BLOCK.getDefaultState(), AbstractBlock.Settings.copy(CINNABAR_BLOCK)));
-    public static final Block CINNABAR_SLAB = registerBlock("cinnabar_slab", new SlabBlock(AbstractBlock.Settings.copy(CINNABAR_BLOCK)));
-    public static final Block CINNABAR_WALL = registerBlock("cinnabar_wall", new WallBlock(AbstractBlock.Settings.copy(CINNABAR_BLOCK)));
+    public static final Block CINNABAR_STAIRS = registerBlock("cinnabar_stairs", properties -> new StairsBlock(CINNABAR_BLOCK.getDefaultState(), properties.instrument(NoteBlockInstrument.BASEDRUM).requiresTool().strength(1.5F, 6.0F).mapColor(DyeColor.YELLOW)));
+    public static final Block CINNABAR_SLAB = registerBlock("cinnabar_slab", properties -> new SlabBlock(properties.instrument(NoteBlockInstrument.BASEDRUM).requiresTool().strength(1.5F, 6.0F).mapColor(DyeColor.YELLOW)));
+    public static final Block CINNABAR_WALL = registerBlock("cinnabar_wall", properties -> new WallBlock(properties.instrument(NoteBlockInstrument.BASEDRUM).requiresTool().strength(1.5F, 6.0F).mapColor(DyeColor.YELLOW)));
 
 
-    public static final Block CHISELED_SULPHUR = registerBlock("chiseled_sulphur", new Block(AbstractBlock.Settings.copy(Blocks.DIORITE).mapColor(DyeColor.YELLOW)));
-    public static final Block CHISELED_CINNABAR = registerBlock("chiseled_cinnabar", new Block(AbstractBlock.Settings.copy(Blocks.DIORITE).mapColor(DyeColor.RED)));
+    public static final Block CHISELED_SULPHUR = registerBlock("chiseled_sulphur", properties -> new Block(properties.instrument(NoteBlockInstrument.BASEDRUM).requiresTool().strength(1.5F, 6.0F).mapColor(DyeColor.YELLOW)));
+    public static final Block CHISELED_CINNABAR = registerBlock("chiseled_cinnabar", properties -> new Block(properties.instrument(NoteBlockInstrument.BASEDRUM).requiresTool().strength(1.5F, 6.0F).mapColor(DyeColor.RED)));
 
-    public static final Block POLISHED_SULPHUR = registerBlock("polished_sulphur", new Block(AbstractBlock.Settings.copy(Blocks.POLISHED_DIORITE).mapColor(DyeColor.YELLOW)));
-    public static final Block POLISHED_CINNABAR = registerBlock("polished_cinnabar", new Block(AbstractBlock.Settings.copy(Blocks.POLISHED_DIORITE).mapColor(DyeColor.RED)));
-    public static final Block POLISHED_SULPHUR_STAIRS = registerBlock("polished_sulphur_stairs", new StairsBlock(POLISHED_SULPHUR.getDefaultState(), AbstractBlock.Settings.copy(POLISHED_SULPHUR)));
-    public static final Block POLISHED_SULPHUR_SLAB = registerBlock("polished_sulphur_slab", new SlabBlock(AbstractBlock.Settings.copy(POLISHED_SULPHUR)));
-    public static final Block POLISHED_SULPHUR_WALL = registerBlock("polished_sulphur_wall", new WallBlock(AbstractBlock.Settings.copy(POLISHED_SULPHUR)));
-    public static final Block POLISHED_CINNABAR_STAIRS = registerBlock("polished_cinnabar_stairs", new StairsBlock(POLISHED_CINNABAR.getDefaultState(), AbstractBlock.Settings.copy(POLISHED_CINNABAR)));
-    public static final Block POLISHED_CINNABAR_SLAB = registerBlock("polished_cinnabar_slab", new SlabBlock(AbstractBlock.Settings.copy(POLISHED_CINNABAR)));
-    public static final Block POLISHED_CINNABAR_WALL = registerBlock("polished_cinnabar_wall", new WallBlock(AbstractBlock.Settings.copy(POLISHED_CINNABAR)));
+    public static final Block POLISHED_SULPHUR = registerBlock("polished_sulphur", properties -> new Block(properties.instrument(NoteBlockInstrument.BASEDRUM).requiresTool().strength(1.5F, 6.0F).mapColor(DyeColor.YELLOW)));
+    public static final Block POLISHED_CINNABAR = registerBlock("polished_cinnabar", properties -> new Block(properties.instrument(NoteBlockInstrument.BASEDRUM).requiresTool().strength(1.5F, 6.0F).mapColor(DyeColor.RED)));
+    public static final Block POLISHED_SULPHUR_STAIRS = registerBlock("polished_sulphur_stairs", properties -> new StairsBlock(POLISHED_SULPHUR.getDefaultState(), properties.instrument(NoteBlockInstrument.BASEDRUM).requiresTool().strength(1.5F, 6.0F).mapColor(DyeColor.YELLOW)));
+    public static final Block POLISHED_SULPHUR_SLAB = registerBlock("polished_sulphur_slab", properties -> new SlabBlock(properties.instrument(NoteBlockInstrument.BASEDRUM).requiresTool().strength(1.5F, 6.0F).mapColor(DyeColor.YELLOW)));
+    public static final Block POLISHED_SULPHUR_WALL = registerBlock("polished_sulphur_wall", properties -> new WallBlock(properties.instrument(NoteBlockInstrument.BASEDRUM).requiresTool().strength(1.5F, 6.0F).mapColor(DyeColor.YELLOW)));
+    public static final Block POLISHED_CINNABAR_STAIRS = registerBlock("polished_cinnabar_stairs", properties -> new StairsBlock(POLISHED_CINNABAR.getDefaultState(), properties.instrument(NoteBlockInstrument.BASEDRUM).requiresTool().strength(1.5F, 6.0F).mapColor(DyeColor.RED)));
+    public static final Block POLISHED_CINNABAR_SLAB = registerBlock("polished_cinnabar_slab", properties -> new SlabBlock(properties.instrument(NoteBlockInstrument.BASEDRUM).requiresTool().strength(1.5F, 6.0F).mapColor(DyeColor.RED)));
+    public static final Block POLISHED_CINNABAR_WALL = registerBlock("polished_cinnabar_wall", properties -> new WallBlock(properties.instrument(NoteBlockInstrument.BASEDRUM).requiresTool().strength(1.5F, 6.0F).mapColor(DyeColor.RED)));
 
-    public static final Block SULPHUR_BRICKS = registerBlock("sulphur_bricks", new Block(AbstractBlock.Settings.copy(POLISHED_SULPHUR).mapColor(DyeColor.YELLOW)));
-    public static final Block CINNABAR_BRICKS = registerBlock("cinnabar_bricks", new Block(AbstractBlock.Settings.copy(POLISHED_CINNABAR).mapColor(DyeColor.RED)));
-    public static final Block SULPHUR_BRICK_STAIRS = registerBlock("sulphur_brick_stairs", new StairsBlock(POLISHED_SULPHUR.getDefaultState(), AbstractBlock.Settings.copy(POLISHED_SULPHUR)));
-    public static final Block SULPHUR_BRICK_SLAB = registerBlock("sulphur_brick_slab", new SlabBlock(AbstractBlock.Settings.copy(POLISHED_SULPHUR)));
-    public static final Block CINNABAR_BRICK_STAIRS = registerBlock("cinnabar_brick_stairs", new StairsBlock(POLISHED_CINNABAR.getDefaultState(), AbstractBlock.Settings.copy(POLISHED_CINNABAR)));
-    public static final Block CINNABAR_BRICK_SLAB = registerBlock("cinnabar_brick_slab", new SlabBlock(AbstractBlock.Settings.copy(POLISHED_CINNABAR)));
+    public static final Block SULPHUR_BRICKS = registerBlock("sulphur_bricks", properties -> new Block(properties.instrument(NoteBlockInstrument.BASEDRUM).requiresTool().strength(1.5F, 6.0F).mapColor(DyeColor.YELLOW).mapColor(DyeColor.YELLOW)));
+    public static final Block CINNABAR_BRICKS = registerBlock("cinnabar_bricks", properties -> new Block(properties.instrument(NoteBlockInstrument.BASEDRUM).requiresTool().strength(1.5F, 6.0F).mapColor(DyeColor.RED).mapColor(DyeColor.RED)));
+    public static final Block SULPHUR_BRICK_STAIRS = registerBlock("sulphur_brick_stairs", properties -> new StairsBlock(POLISHED_SULPHUR.getDefaultState(), properties.instrument(NoteBlockInstrument.BASEDRUM).requiresTool().strength(1.5F, 6.0F).mapColor(DyeColor.YELLOW)));
+    public static final Block SULPHUR_BRICK_SLAB = registerBlock("sulphur_brick_slab", properties -> new SlabBlock(properties.instrument(NoteBlockInstrument.BASEDRUM).requiresTool().strength(1.5F, 6.0F).mapColor(DyeColor.YELLOW)));
+    public static final Block CINNABAR_BRICK_STAIRS = registerBlock("cinnabar_brick_stairs", properties -> new StairsBlock(POLISHED_CINNABAR.getDefaultState(), properties.instrument(NoteBlockInstrument.BASEDRUM).requiresTool().strength(1.5F, 6.0F).mapColor(DyeColor.RED)));
+    public static final Block CINNABAR_BRICK_SLAB = registerBlock("cinnabar_brick_slab", properties -> new SlabBlock(properties.instrument(NoteBlockInstrument.BASEDRUM).requiresTool().strength(1.5F, 6.0F).mapColor(DyeColor.RED)));
 
-    private static Block registerBlockWithoutBlockItem(String name, Block block) {
-        return Registry.register(Registries.BLOCK, Identifier.of(MOD_ID, name), block);
+    private static Block registerBlock(String name, Function<AbstractBlock.Settings, Block> function) {
+        Block toRegister = function.apply(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(MOD_ID, name))));
+        registerBlockItem(name, toRegister);
+        return Registry.register(Registries.BLOCK, Identifier.of(MOD_ID, name), toRegister);
     }
 
-    private static Block registerBlock(String name, Block block) {
-        registerBlockItem(name, block);
-        return Registry.register(Registries.BLOCK, Identifier.of(MOD_ID, name), block);
+    private static Block registerBlockWithoutBlockItem(String name, Function<AbstractBlock.Settings, Block> function) {
+        return Registry.register(Registries.BLOCK, Identifier.of(MOD_ID, name),
+                function.apply(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(MOD_ID, name)))));
     }
 
     private static void registerBlockItem(String name, Block block) {
         Registry.register(Registries.ITEM, Identifier.of(MOD_ID, name),
-                new BlockItem(block, new Item.Settings()));
+                new BlockItem(block, new Item.Settings().useBlockPrefixedTranslationKey()
+                        .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(MOD_ID, name)))));
     }
 
     public static void init() {
