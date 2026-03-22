@@ -41,10 +41,12 @@ public class ModModelProvider extends FabricModelProvider {
         BlockStateModelGenerator.BlockTexturePool CINNABARB = blockStateModelGenerator.registerCubeAllModelTexturePool(SBBlocks.CINNABAR_BRICKS);
         CINNABARB.slab(SBBlocks.CINNABAR_BRICK_SLAB);
         CINNABARB.stairs(SBBlocks.CINNABAR_BRICK_STAIRS);
+        CINNABARB.wall(SBBlocks.CINNABAR_BRICK_WALL);
 
         BlockStateModelGenerator.BlockTexturePool SULPHURB = blockStateModelGenerator.registerCubeAllModelTexturePool(SBBlocks.SULPHUR_BRICKS);
         SULPHURB.slab(SBBlocks.SULPHUR_BRICK_SLAB);
         SULPHURB.stairs(SBBlocks.SULPHUR_BRICK_STAIRS);
+        SULPHURB.wall(SBBlocks.SULPHUR_BRICK_WALL);
     }
 
     @Override

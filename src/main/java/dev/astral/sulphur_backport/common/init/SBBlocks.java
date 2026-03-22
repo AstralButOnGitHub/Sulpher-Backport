@@ -43,11 +43,13 @@ public class SBBlocks {
     public static final Block POLISHED_CINNABAR_WALL = registerBlock("polished_cinnabar_wall", new WallBlock(AbstractBlock.Settings.copy(POLISHED_CINNABAR)));
 
     public static final Block SULPHUR_BRICKS = registerBlock("sulphur_bricks", new Block(AbstractBlock.Settings.copy(POLISHED_SULPHUR).mapColor(DyeColor.YELLOW)));
+    public static final Block SULPHUR_BRICK_STAIRS = registerBlock("sulphur_brick_stairs", new StairsBlock(SULPHUR_BRICKS.getDefaultState(), AbstractBlock.Settings.copy(SULPHUR_BRICKS)));
+    public static final Block SULPHUR_BRICK_SLAB = registerBlock("sulphur_brick_slab", new SlabBlock(AbstractBlock.Settings.copy(SULPHUR_BRICKS)));
+    public static final Block SULPHUR_BRICK_WALL = registerBlock("sulphur_brick_wall", new WallBlock(AbstractBlock.Settings.copy(SULPHUR_BRICKS)));
     public static final Block CINNABAR_BRICKS = registerBlock("cinnabar_bricks", new Block(AbstractBlock.Settings.copy(POLISHED_CINNABAR).mapColor(DyeColor.RED)));
-    public static final Block SULPHUR_BRICK_STAIRS = registerBlock("sulphur_brick_stairs", new StairsBlock(POLISHED_SULPHUR.getDefaultState(), AbstractBlock.Settings.copy(POLISHED_SULPHUR)));
-    public static final Block SULPHUR_BRICK_SLAB = registerBlock("sulphur_brick_slab", new SlabBlock(AbstractBlock.Settings.copy(POLISHED_SULPHUR)));
-    public static final Block CINNABAR_BRICK_STAIRS = registerBlock("cinnabar_brick_stairs", new StairsBlock(POLISHED_CINNABAR.getDefaultState(), AbstractBlock.Settings.copy(POLISHED_CINNABAR)));
-    public static final Block CINNABAR_BRICK_SLAB = registerBlock("cinnabar_brick_slab", new SlabBlock(AbstractBlock.Settings.copy(POLISHED_CINNABAR)));
+    public static final Block CINNABAR_BRICK_STAIRS = registerBlock("cinnabar_brick_stairs", new StairsBlock(CINNABAR_BRICKS.getDefaultState(), AbstractBlock.Settings.copy(CINNABAR_BRICKS)));
+    public static final Block CINNABAR_BRICK_SLAB = registerBlock("cinnabar_brick_slab", new SlabBlock(AbstractBlock.Settings.copy(CINNABAR_BRICKS)));
+    public static final Block CINNABAR_BRICK_WALL = registerBlock("cinnabar_brick_wall", new WallBlock(AbstractBlock.Settings.copy(CINNABAR_BRICKS)));
 
     private static Block registerBlockWithoutBlockItem(String name, Block block) {
         return Registry.register(Registries.BLOCK, Identifier.of(MOD_ID, name), block);
@@ -82,6 +84,7 @@ public class SBBlocks {
             entries.add(SULPHUR_BRICKS);
             entries.add(SULPHUR_BRICK_STAIRS);
             entries.add(SULPHUR_BRICK_SLAB);
+            entries.add(SULPHUR_BRICK_WALL);
 
             entries.add(CINNABAR_BLOCK);
             entries.add(CINNABAR_STAIRS);
@@ -95,6 +98,10 @@ public class SBBlocks {
             entries.add(CINNABAR_BRICKS);
             entries.add(CINNABAR_BRICK_STAIRS);
             entries.add(CINNABAR_BRICK_SLAB);
+            entries.add(CINNABAR_BRICK_WALL);
+
+            entries.add(POTENT_SULPHUR);
+
         });
     }
 }

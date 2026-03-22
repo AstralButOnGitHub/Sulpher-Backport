@@ -1,8 +1,10 @@
 {
   "values": [
     "sulphur_backport:cinnabar_wall",
+    "sulphur_backport:polished_cinnabar_wall",
+    "sulphur_backport:cinnabar_brick_wall",
     "sulphur_backport:sulphur_wall",
     "sulphur_backport:polished_sulphur_wall",
-    "sulphur_backport:polished_sulphur_wall"
+    "sulphur_backport:sulphur_brick_wall"
   ]
 }

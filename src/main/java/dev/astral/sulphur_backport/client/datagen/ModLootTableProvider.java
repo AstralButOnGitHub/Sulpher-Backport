@@ -14,6 +14,8 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
     @Override
     public void generate() {
+        addDrop(SBBlocks.POTENT_SULPHUR);
+
         addDrop(SBBlocks.SULPHUR_BLOCK);
         addDrop(SBBlocks.CINNABAR_BLOCK);
 
@@ -41,8 +43,10 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(SBBlocks.CINNABAR_BRICKS);
         addDrop(SBBlocks.SULPHUR_BRICK_STAIRS);
         addDrop(SBBlocks.SULPHUR_BRICK_SLAB, slabDrops(SBBlocks.SULPHUR_BRICK_SLAB));
+        addDrop(SBBlocks.SULPHUR_BRICK_WALL);
         addDrop(SBBlocks.CINNABAR_BRICK_STAIRS);
         addDrop(SBBlocks.CINNABAR_BRICK_SLAB, slabDrops(SBBlocks.CINNABAR_BRICK_SLAB));
+        addDrop(SBBlocks.CINNABAR_BRICK_WALL);
     }
 
 }

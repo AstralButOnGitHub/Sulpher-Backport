@@ -1,5 +1,6 @@
 {
   "values": [
+    "sulphur_backport:potent_sulphur",
     "sulphur_backport:sulphur_block",
     "sulphur_backport:cinnabar_block",
     "sulphur_backport:sulphur_stairs",
@@ -22,7 +23,9 @@
     "sulphur_backport:cinnabar_bricks",
     "sulphur_backport:sulphur_brick_stairs",
     "sulphur_backport:sulphur_brick_slab",
+    "sulphur_backport:sulphur_brick_wall",
     "sulphur_backport:cinnabar_brick_stairs",
-    "sulphur_backport:cinnabar_brick_slab"
+    "sulphur_backport:cinnabar_brick_slab",
+    "sulphur_backport:cinnabar_brick_wall"
   ]
 }

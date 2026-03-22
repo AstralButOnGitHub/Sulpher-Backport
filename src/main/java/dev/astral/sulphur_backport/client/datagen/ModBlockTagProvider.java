@@ -18,6 +18,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
         add(BlockTags.PICKAXE_MINEABLE,
+                SBBlocks.POTENT_SULPHUR,
+
                 SBBlocks.SULPHUR_BLOCK,
                 SBBlocks.CINNABAR_BLOCK,
 
@@ -45,8 +47,10 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 SBBlocks.CINNABAR_BRICKS,
                 SBBlocks.SULPHUR_BRICK_STAIRS,
                 SBBlocks.SULPHUR_BRICK_SLAB,
+                SBBlocks.SULPHUR_BRICK_WALL,
                 SBBlocks.CINNABAR_BRICK_STAIRS,
-                SBBlocks.CINNABAR_BRICK_SLAB
+                SBBlocks.CINNABAR_BRICK_SLAB,
+                SBBlocks.CINNABAR_BRICK_WALL
         );
 
         add(BlockTags.MOSS_REPLACEABLE,
@@ -95,9 +99,11 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         );
         add(BlockTags.WALLS,
                 SBBlocks.CINNABAR_WALL,
+                SBBlocks.POLISHED_CINNABAR_WALL,
+                SBBlocks.CINNABAR_BRICK_WALL,
                 SBBlocks.SULPHUR_WALL,
                 SBBlocks.POLISHED_SULPHUR_WALL,
-                SBBlocks.POLISHED_SULPHUR_WALL
+                SBBlocks.SULPHUR_BRICK_WALL
         );
     }
 

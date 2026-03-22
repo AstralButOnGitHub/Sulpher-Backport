@@ -2,7 +2,7 @@
   "block.sulphur_backport.sulphur_block": "Sulphur",
   "block.sulphur_backport.cinnabar_block": "Cinnabar",
 
-  "block.sulphur_backport.potent_sulphur": "Potent Sulphur",
+  "block.sulphur_backport.potent_sulphur": "Potent Sulphur UNFINISHED",
 
   "block.sulphur_backport.sulphur_stairs": "Sulphur Stairs",
   "block.sulphur_backport.sulphur_slab": "Sulphur Slab",
@@ -27,6 +27,8 @@
   "block.sulphur_backport.cinnabar_bricks": "Cinnabar Bricks",
   "block.sulphur_backport.sulphur_brick_stairs": "Sulphur Brick Stairs",
   "block.sulphur_backport.sulphur_brick_slab": "Sulphur Brick Slab",
+  "block.sulphur_backport.sulphur_brick_wall": "Sulphur Brick Wall",
   "block.sulphur_backport.cinnabar_brick_stairs": "Cinnabar Brick Stairs",
-  "block.sulphur_backport.cinnabar_brick_slab": "Cinnabar Brick Slab"
+  "block.sulphur_backport.cinnabar_brick_slab": "Cinnabar Brick Slab",
+  "block.sulphur_backport.cinnabar_brick_wall": "Cinnabar Brick Wall"
 }
