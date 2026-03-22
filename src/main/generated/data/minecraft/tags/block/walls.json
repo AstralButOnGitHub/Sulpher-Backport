@@ -1,6 +1,8 @@
 {
   "values": [
-    "sulpher_backport:polished_cinnabar_wall",
-    "sulpher_backport:polished_sulfer_wall"
+    "sulphur_backport:cinnabar_wall",
+    "sulphur_backport:sulphur_wall",
+    "sulphur_backport:polished_sulphur_wall",
+    "sulphur_backport:polished_sulphur_wall"
   ]
 }

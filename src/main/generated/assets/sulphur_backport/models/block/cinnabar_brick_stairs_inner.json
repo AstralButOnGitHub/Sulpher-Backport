@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "sulphur_backport:block/cinnabar_bricks",
+    "side": "sulphur_backport:block/cinnabar_bricks",
+    "top": "sulphur_backport:block/cinnabar_bricks"
+  }
+}

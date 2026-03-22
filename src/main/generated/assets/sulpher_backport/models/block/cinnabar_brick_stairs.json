@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/stairs",
-  "textures": {
-    "bottom": "sulpher_backport:block/cinnabar_bricks",
-    "side": "sulpher_backport:block/cinnabar_bricks",
-    "top": "sulpher_backport:block/cinnabar_bricks"
-  }
-}

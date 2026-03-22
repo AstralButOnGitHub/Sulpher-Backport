@@ -1,23 +1,23 @@
 {
   "schemaVersion": 1,
-  "id": "sulpher_backport",
+  "id": "sulphur_backport",
   "version": "${version}",
-  "name": "Sulpher Backport",
+  "name": "Sulphur Backport",
   "description": "Backports the Cinnabar and Sulphur from the Chaos Cubed update.",
   "authors": [],
   "contact": {},
   "license": "ARR",
-  "icon": "assets/sulpher_backport/icon.png",
+  "icon": "assets/sulphur_backport/icon.png",
   "environment": "*",
   "entrypoints": {
     "fabric-datagen": [
-      "dev.astral.sulpher_backport.client.Sulpher_backportDataGenerator"
+      "dev.astral.sulphur_backport.client.Sulphur_backportDataGenerator"
     ],
     "client": [
-      "dev.astral.sulpher_backport.client.Sulpher_backportClient"
+      "dev.astral.sulphur_backport.client.Sulphur_backportClient"
     ],
     "main": [
-      "dev.astral.sulpher_backport.Sulpher_backport"
+      "dev.astral.sulphur_backport.Sulphur_backport"
     ]
   },
   "mixins": [

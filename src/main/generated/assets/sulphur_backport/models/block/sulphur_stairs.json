@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "sulphur_backport:block/sulphur_block",
+    "side": "sulphur_backport:block/sulphur_block",
+    "top": "sulphur_backport:block/sulphur_block"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "sulphur_backport:block/chiseled_sulphur"
+  }
+}

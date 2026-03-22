@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "sulphur_backport:block/cinnabar_slab"
+    },
+    "type=double": {
+      "model": "sulphur_backport:block/cinnabar_block"
+    },
+    "type=top": {
+      "model": "sulphur_backport:block/cinnabar_slab_top"
+    }
+  }
+}
