@@ -1,23 +1,21 @@
 package dev.astral.sulphur_backport.client.datagen;
 
 import dev.astral.sulphur_backport.common.init.SBBlocks;
-import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
-import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
-import net.minecraft.block.Block;
-import net.minecraft.registry.RegistryWrapper;
-import net.minecraft.registry.tag.BlockTags;
-import net.minecraft.registry.tag.TagKey;
+import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
+import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.tags.BlockTags;
 
 import java.util.concurrent.CompletableFuture;
 
-public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
-    public ModBlockTagProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
-        super(output, registriesFuture);
+public class ModBlockTagProvider extends FabricTagsProvider.BlockTagsProvider {
+    public ModBlockTagProvider(FabricPackOutput output, CompletableFuture<HolderLookup.Provider> registryLookupFuture) {
+        super(output, registryLookupFuture);
     }
 
     @Override
-    protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
-        valueLookupBuilder(BlockTags.PICKAXE_MINEABLE)
+    protected void addTags(HolderLookup.Provider registries) {
+        valueLookupBuilder(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(
                         SBBlocks.SULPHUR_BLOCK,
                         SBBlocks.CINNABAR_BLOCK,
@@ -62,7 +60,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         valueLookupBuilder(BlockTags.SCULK_REPLACEABLE_WORLD_GEN)
                 .add(SBBlocks.SULPHUR_BLOCK, SBBlocks.CINNABAR_BLOCK);
 
-        valueLookupBuilder(BlockTags.DRIPSTONE_REPLACEABLE_BLOCKS)
+        valueLookupBuilder(BlockTags.DRIPSTONE_REPLACEABLE)
                 .add(SBBlocks.SULPHUR_BLOCK, SBBlocks.CINNABAR_BLOCK);
 
         valueLookupBuilder(BlockTags.AZALEA_ROOT_REPLACEABLE)
