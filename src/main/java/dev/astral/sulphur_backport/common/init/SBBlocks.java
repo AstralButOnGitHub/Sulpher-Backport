@@ -14,7 +14,6 @@ import net.minecraft.util.Identifier;
 import static dev.astral.sulphur_backport.Sulphur_backport.MOD_ID;
 
 public class SBBlocks {
-
     public static final Block POTENT_SULPHUR = registerBlock("potent_sulphur", new PotentSulphurBlock(AbstractBlock.Settings.copy(Blocks.DIORITE).mapColor(DyeColor.YELLOW)));
 
     public static final Block SULPHUR_BLOCK = registerBlock("sulphur_block", new Block(AbstractBlock.Settings.copy(Blocks.DIORITE).mapColor(DyeColor.YELLOW)));

@@ -14,7 +14,7 @@ public class Sulphur_backportDataGenerator implements DataGeneratorEntrypoint {
         FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
         pack.addProvider(ModLootTableProvider::new);
         pack.addProvider(ModModelProvider::new);
-        pack.addProvider(ModRecipeProvider::new);
+        pack.addProvider((FabricDataGenerator.Pack.Factory<ModRecipeProvider>) ModRecipeProvider::new);
         pack.addProvider(ModBlockTagProvider::new);
     }
 }
